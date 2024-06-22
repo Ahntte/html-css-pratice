@@ -1,0 +1,218 @@
+/* font style  */
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* reset css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+textarea,
+input {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  /* font-size는 가변적임 */
+}
+
+button:focus,
+button:active,
+textarea:focus,
+textarea:active,
+input:focus,
+input:active {
+  box-shadow: none;
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* common style  */
+
+.container {
+  padding: 40px;
+  height: 100vh;
+}
+
+/* first section style  */
+
+.first-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/slideimg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s ease-in-out;
+}
+.first-section header {
+  /* background-color: aqua; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+/* logo style */
+
+.text-logo {
+  font-size: 35px;
+  color: #fff;
+  width: 30%;
+  padding: 20px 0 20px 60px;
+}
+.text-logo span {
+  display: block;
+}
+.text-logo span:first-child::first-letter {
+  color: rgb(255, 48, 48);
+}
+
+/* nav bar style */
+
+.gnb {
+  background-color: hotpink;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70%;
+  height: 86px;
+  border-radius: 9px;
+  background-color: hsla(0, 0%, 41%, 0.3);
+}
+
+.gnb ul {
+  width: 70%;
+
+  color: #ffffff;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.user-in-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+/* login style */
+
+.login-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  width: 40%;
+}
+
+.login-signup a:first-child {
+  margin-right: 13px;
+}
+
+/* sns style */
+
+.sns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sns div {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-right: 11px;
+}
+.i-color {
+  color: #ffffff;
+  cursor: pointer;
+}
+.i-size {
+  font-size: 26px;
+}
+
+.box-border {
+  border-radius: 9px;
+  padding: 15px;
+  background-color: hsla(0, 0%, 41%, 0.55);
+}
+
+/* hover style */
+
+.insta-box .i-size:nth-child(1):hover {
+  background-image: linear-gradient(
+    to top,
+    #f58529,
+    #feda77,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.twitter-box .i-size:nth-child(1):hover {
+  background-image: linear-gradient(to top, #6eb6ff, #3197f0);
+  background-clip: text;
+  color: transparent;
+}
+.plantcafe-box .i-size:nth-child(1):hover {
+  background-image: linear-gradient(to top, #8bf587, #0c853b);
+  background-clip: text;
+  color: transparent;
+}
+
+.fade-in {
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0;
+}
+.blink {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* transition: opacity 2500ms ease-in-out; */
+}
+.blink.blur {
+  /* opacity: 0.5; */
+  background-color: #dedede;
+  animation-name: img-blink;
+  animation-duration: 9000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes img-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
