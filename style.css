@@ -55,8 +55,9 @@ ul {
   height: 100%;
   background-image: url("./assets/slideimg1.jpg");
   background-size: cover;
+  background-position-y: -100px;
   background-repeat: no-repeat;
-  transition: opacity 0.5s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 .first-section header {
   /* background-color: aqua; */
@@ -74,12 +75,11 @@ ul {
   color: #fff;
   width: 30%;
   padding: 20px 0 20px 60px;
+  z-index: 9999;
+  margin-top: 60px;
 }
 .text-logo span {
   display: block;
-}
-.text-logo span:first-child::first-letter {
-  color: rgb(255, 48, 48);
 }
 
 /* nav bar style */
@@ -93,17 +93,21 @@ ul {
   height: 86px;
   border-radius: 9px;
   background-color: hsla(0, 0%, 41%, 0.3);
+  margin-top: 60px;
 }
 
 .gnb ul {
   width: 70%;
-
   color: #ffffff;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 16px;
+  z-index: 9990;
+}
+
+.gnb ul li {
   cursor: pointer;
 }
 
@@ -123,18 +127,26 @@ ul {
   color: #ffffff;
   font-size: 20px;
   width: 40%;
+  z-index: 9999;
 }
 
 .login-signup a:first-child {
-  margin-right: 13px;
+  margin-right: 5px;
 }
-
+.login-signup a:last-child {
+  margin-left: 5px;
+}
 /* sns style */
 
 .sns {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 30px;
+  margin-right: 10px;
 }
 .sns div {
   width: 30px;
@@ -144,6 +156,7 @@ ul {
   align-items: center;
   margin-top: 5px;
   margin-right: 11px;
+  z-index: 99999;
 }
 .i-color {
   color: #ffffff;
@@ -156,7 +169,6 @@ ul {
 .box-border {
   border-radius: 9px;
   padding: 15px;
-  background-color: hsla(0, 0%, 41%, 0.55);
 }
 
 /* hover style */
@@ -179,40 +191,37 @@ ul {
   background-clip: text;
   color: transparent;
 }
+
 .plantcafe-box .i-size:nth-child(1):hover {
   background-image: linear-gradient(to top, #8bf587, #0c853b);
   background-clip: text;
   color: transparent;
 }
 
-.fade-in {
-  opacity: 1;
-}
-.fade-out {
-  opacity: 0;
-}
+/* slide blur effect style */
+
 .blink {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* transition: opacity 2500ms ease-in-out; */
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 .blink.blur {
   /* opacity: 0.5; */
-  background-color: #dedede;
-  animation-name: img-blink;
-  animation-duration: 9000ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
+  opacity: 1;
 }
-@keyframes img-blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
+
+#underline-horizontal {
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  top: 0;
+  background-color: pink;
+  border-radius: 3px;
+  transition: 0.5s;
 }

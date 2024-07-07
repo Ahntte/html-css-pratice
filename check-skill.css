@@ -1,0 +1,85 @@
+/* check box style */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+textarea,
+input {
+  border: none;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  font-size: 16px;
+  padding: 11px 24px;
+  cursor: pointer;
+  border-radius: 9px;
+  color: #ffffff;
+  /* font-size는 가변적임 */
+}
+
+button:focus,
+button:active,
+textarea:focus,
+textarea:active,
+input:focus,
+input:active {
+  box-shadow: none;
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.first-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.card-container {
+  width: 25%;
+  border-radius: 9px;
+  background-color: pink;
+  padding: 12px;
+}
+.card-content {
+  width: 100%;
+  height: 200px;
+  border-radius: 9px;
+  background-color: steelblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.card-desc {
+  width: 100%;
+  height: 200px;
+  margin: 9px 0;
+  border-radius: 9px;
+  background-color: rgb(139, 255, 189);
+  font-size: 18px;
+
+  padding: 6px;
+}
+.check-skill {
+  text-align: center;
+  width: 100%;
+  border-radius: 9px;
+  margin: 0 auto;
+}
+.btn-container {
+  margin-top: 9px;
+}
